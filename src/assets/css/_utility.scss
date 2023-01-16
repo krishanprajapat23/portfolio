@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900;1000&display=swap");
+$light-clr: #ccd6f6;
+$primary-font: "Nunito", Helvetica, sans-serif;
+
+$orange: #ff1e00;
+$light-blue: #e8f9fd;
+$transition1: all 0.2s ease-in;
+$inner-size: clamp(1rem, 5vw, 2rem);
+$gradient: radial-gradient(circle, #002a48, #061321 35%);
+$card-bg:  #212936;
+
+
+@function blue($opacity) {
+  @return rgba(#061321, $opacity)
+}
+
+
+html {
+  scroll-behavior: smooth;
+  // cursor: url(https://www.onyedika.xyz/static/media/arrowPoint.5b3f3b5c07736388f143.svg) 5 5,move;
+}
+
+// a[href], button, input[type=checkbox], input[type=image], input[type=submit], label[for], select {
+//   cursor: url(https://www.onyedika.xyz/static/media/arrowClick.7219a884818048edacbe.svg) 5 5,move!important;
+// }
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #ff1e00;
+  color: $light-blue;
+}
+
+@font-face {
+  font-family: EmotionalRescue;
+  src: url(../EmotionalRescue.ttf);
+}
+
+
+//scrollbar css
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $light-blue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $orange;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 30, 0, 0.6);
+}
+
+
+p {
+  font-size: clamp(0.875rem, 5vw, 1rem);
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#theme-btn {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  color: $light-blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+    background: $orange;
+    border-radius: 20px;
+    transition: $transition1;
+}
+
+#gray-btn {
+  background: transparent;
+    border: 2px solid $card-bg;
+    box-shadow: none;
+    color: blue(1);
+    padding: 0.875rem 1.25rem;
+    font-size: 0.85rem;
+    transition: $transition1;
+    &:hover {
+      background: $card-bg;
+      color: #fff;
+    }
+}
+
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+hr {
+  width: 100px;
+  border-top: 3px dashed rgba(0, 0, 0, 0.4) !important;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.section-heading {
+  color: blue(1);
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+.tip{
+  transition: $transition1;
+}
+
+
+#center-grid {
+  display: grid;
+  place-items: center;
+}
+
+
+
