@@ -8,7 +8,7 @@ function NavBar() {
           <a className="navbar-brand" href="#">
             <img
               loading="lazy"
-              src="src/assets/img/logo.webp"
+              src="/src/assets/img/logo.webp"
               alt="logo"
               className="rounded-circle logo"
               width="70"
